@@ -1,0 +1,7 @@
+@if(IsLoginIn){
+    <app-login (signupRequested)="onToggleDisplay()"></app-login>
+}
+@else{
+    <app-signup (signupRequested)="onToggleDisplay()"></app-signup>
+}
+

@@ -1,0 +1,17 @@
+<h1 class="text-center mt-5"><b>Top Destinations</b></h1>
+<div class="container mt-5">
+    <div class="d-flex flex-wrap gap-5">
+        @for(item of activities;track item.id){
+            <app-district-card [district]="item"></app-district-card>
+        }
+    </div>
+</div>
+
+<h1 class="text-center mt-5"><b>Things to do in Kerala</b></h1>
+<div class="container-fluid">
+<div class="container mt-5 d-flex gap-5 flex-wrap explore">
+    @for(item of explore; track item.id){
+        <app-individual-district-card [district_details] = "item"></app-individual-district-card>
+    }   
+</div>
+</div>

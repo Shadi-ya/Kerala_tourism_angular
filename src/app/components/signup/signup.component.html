@@ -1,0 +1,68 @@
+<div class="flex">
+    <div class="container">
+        <form [formGroup]="signupForm" (ngSubmit)="signup()">
+            <h1><b>Sign Up</b></h1>
+            <div class="input">
+                <input type="text" formControlName="full_name" placeholder="Full Name"/>
+                <!-- <label>Full Name</label> -->
+                <div *ngIf="signupForm.get('full_name')?.invalid && signupForm.get('full_name')?.touched">
+                    <div *ngIf="signupForm.get('full_name')?.errors?.['required']" class="text-danger">Name is required.</div>
+                </div>
+            </div>
+            <div class="input">
+                <input type="email" formControlName="email" placeholder="Email"/>
+                <!-- <label>Email</label> -->
+                <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                    <div *ngIf="signupForm.get('email')?.errors?.['required']" class="text-danger">Email is required.</div>
+                    <div *ngIf="signupForm.get('email')?.errors?.['email']" class="text-danger">Invalid email format.</div>
+                </div>
+            </div>
+            <div class="input box">
+                <input type="password" formControlName="password" placeholder="Password"/>
+                <!-- <label>Password</label> -->
+                <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                    <div *ngIf="signupForm.get('password')?.errors?.['required']" class="text-danger">Password is required.</div>
+                    <div *ngIf="signupForm.get('password')?.errors?.['minlength']" class="text-danger">Minimum 6 characters required.</div>
+                </div>
+            </div>
+            <div class="input box">
+                <input type="password" formControlName="confirm_password" placeholder="Confirm Password"/>
+                <!-- <label>Confirm Password</label> -->
+                <div *ngIf="signupForm.get('confirm_password')?.invalid && signupForm.get('confirm_password')?.touched">
+                    <div *ngIf="signupForm.get('confirm_password')?.errors?.['required']" class="text-danger">Password is required.</div>
+                    <div *ngIf="signupForm.get('confirm_password')?.errors?.['minlength']" class="text-danger">Minimum 6 characters required.</div>
+                </div>
+            </div>
+            <div class="input box">
+                <input type="text" formControlName="phone" placeholder="Phone Number" />
+                <!-- <label>Phone Number</label> -->
+                <div *ngIf="signupForm.get('phone')?.invalid && signupForm.get('phone')?.touched">
+                    <div *ngIf="signupForm.get('phone')?.errors?.['required']" class="text-danger">Phone Number is required.</div>
+                    <div *ngIf="signupForm.get('phone')?.errors?.['minlength']" class="text-danger">10 characters required.</div>
+                </div>
+            </div>
+            <div class="dob">
+                <label>Date of Birth</label><br>
+                <input type="date" formControlName="dob"/>
+                <div *ngIf="signupForm.get('dob')?.invalid && signupForm.get('dob')?.touched">
+                    <div *ngIf="signupForm.get('dob')?.errors?.['dob']" class="text-danger">Date of Birth is required.</div>
+                </div>
+            </div><br>
+            <div class="gender">
+                <label for="gender">Gender</label><br>
+                <input type="radio" name="gender" value="male" >&nbsp;
+                <label for="male">Male</label><br>
+                <input type="radio" name="gender" value="female">&nbsp;
+                <label for="female">Female</label><br>
+                <input type="radio" name="gender" value="others">&nbsp;
+                <label for="others">Others</label>
+            </div>
+           
+            <input class="L_btn" type="submit" [disabled]="signupForm.invalid" value="Login" />
+        </form>
+        <div class="div">
+            <div class="line"></div>
+            <div class="signup">Already Have an account? <a (click)="onSignupClick()"><b>Login</b></a></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.card1{
+    width: 330px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+    transition: scale 1s ease;
+    img{
+        height: 100%;
+        width:100%;
+        border-radius: 20px;
+        filter: brightness(60%);
+    }
+    .card-text{
+        color: white;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 39%;
+    }
+    
+}
+.card1:hover{
+    scale: 1.05;
+}

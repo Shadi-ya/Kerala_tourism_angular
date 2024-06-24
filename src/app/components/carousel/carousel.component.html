@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <h2>Guided Tours & Experiences</h2><br>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card-wrapper d-flex">
+                @for(item of keralaTours1; track item.id){
+                    <app-carousel-card [tour]="item"></app-carousel-card>
+                }
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card-wrapper d-flex">
+                @for(item of keralaTours2; track item.id){
+                    <app-carousel-card [tour]="item"></app-carousel-card>
+                }
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card-wrapper d-flex">
+                @for(item of keralaTours3; track item.id){
+                    <app-carousel-card [tour]="item"></app-carousel-card>
+                }
+            </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

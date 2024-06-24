@@ -1,0 +1,14 @@
+.card{
+    border: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px !important;
+    transition: scale 1s ease;
+    img{
+        box-shadow: 3px 3px 5px rgb(0, 0, 0);
+        border-radius: 10px;
+    }
+}
+.card:hover{
+    scale: 1.05;
+}

@@ -1,0 +1,16 @@
+h2{
+    font-weight: bold;
+}
+.card-wrapper{
+    padding: 20px 30px;
+}
+.carousel-control-prev, .carousel-control-next{
+    background-color: #000000;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    top: 28%;
+    .carousel-control-prev-icon,.carousel-control-next-icon{
+        width: 25px;
+    }
+}

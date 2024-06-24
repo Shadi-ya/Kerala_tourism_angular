@@ -1,0 +1,24 @@
+.card{
+    margin: 0 .5em;
+    border: none;
+    width: 335px;
+    transition: scale 1s ease;
+    img{
+        border-radius: 20px;
+        height: 330px;
+        object-fit: cover;
+    }
+    .btn{
+        background-color: rgb(9, 113, 71);
+        box-shadow: 2px 2px 3px black;
+        border-radius: 10px !important;
+        color: white;
+    }
+    .card-title{
+        font-weight: bold;
+    }
+    
+}
+.card:hover{
+    scale: 1.05;
+}

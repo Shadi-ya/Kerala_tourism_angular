@@ -1,0 +1,12 @@
+<div class="top-image">
+    <img src="https://images.pexels.com/photos/10229156/pexels-photo-10229156.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="w-100">
+    <div class="top-text">
+        <h3>"Explore Kerala: A Journey Through Its Vibrant Districts"</h3>
+        <h5>Immerse yourself in the tranquil beauty and vibrant culture of Kerala.</h5>
+    </div>
+</div>
+<div class="container mt-5 d-flex gap-5 flex-wrap">
+    @for(item of district_full; track item.id){
+        <app-individual-district-card [district_details] = "item"></app-individual-district-card>
+    }   
+</div>

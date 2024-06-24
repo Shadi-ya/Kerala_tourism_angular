@@ -1,0 +1,63 @@
+.top-image{
+    position: relative;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .top-text{
+        position: absolute;
+        width: 500px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: scale 1s ease;
+    }
+    .top-text:hover{
+        background-color: white;
+        box-shadow: 3px 3px 5px rgb(0, 0, 0);
+        scale: 1.05;
+    }
+    
+    h3{
+        font-weight: bold;
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+    }
+    h5{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    img{
+        height: 600px;
+        object-fit: cover;
+        object-position: 0 bottom;
+    }
+}
+.kerala-desc{
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: fixed;
+    background-image: url("https://assets.cntraveller.in/photos/63a006ba475c3961e1f45ebf/16:9/w_960,c_limit/The-aesthete%E2%80%99s-guide-to-Fort-Kochi-lead2-res.jpg");
+
+    .container{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 700px;
+        padding: 30px;
+        border-radius: 20px;
+        h2{
+            font-weight: bold;
+        }
+        p{
+            font-style: italic;
+        }
+        
+    }
+    :hover{
+        background-color: black;
+    }
+}

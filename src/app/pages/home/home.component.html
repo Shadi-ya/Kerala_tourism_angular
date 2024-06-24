@@ -1,0 +1,25 @@
+<div class="top-image">
+    <img src="https://images.pexels.com/photos/13691355/pexels-photo-13691355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="w-100">
+    <div class="top-text">
+        <h3>"Experience the Serenity of Kerala"</h3>
+        <h5>Immerse yourself in the tranquil beauty and vibrant culture of Kerala.</h5>
+    </div>
+</div>
+<app-carousel></app-carousel>
+
+<div class="kerala-desc mt-5">
+    <div class="container">
+        <h2>Kerala: The Land Where Nature and Culture Embrace</h2>
+        <p>Experience the enchanting beauty of Kerala, where lush landscapes, serene backwaters, and pristine beaches meet vibrant traditions, rich cultural heritage, and warm hospitality. Discover a paradise where nature and culture intertwine to offer an unforgettable journey through God's Own Country.</p>
+    </div>
+</div>
+<div class="container mt-5">
+    <h2 class="mb-5"><b>Discover Kerala's Diverse Districts</b></h2>
+    <div class="d-flex flex-wrap gap-5">
+        @for(item of districts;track item.id){
+            <app-district-card [district]="item"></app-district-card>
+        }
+    </div>
+    <a class="btn btn-success mt-5" type="button" routerLink="/districts">View more</a>
+</div>
+

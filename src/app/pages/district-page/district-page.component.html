@@ -1,0 +1,21 @@
+<div class="top-image">
+    <img [src]="district.src" alt="" class="w-100">
+    <div class="top-text">
+        <h3>{{district.name}}</h3>
+    </div>
+</div>
+<div class="container mt-5 text-center">
+    <h3><b>{{district.title}}</b></h3>
+    <p>{{district.description}}</p>
+</div>
+
+<div class="container">
+    <h3 class="mt-5"><b>Tourist Attractions</b></h3>
+    <div class="d-flex flex-wrap mt-5 justify-content-center gap-3">
+        @for(item of district.tourist_attractions;track item.id){
+            <app-carousel-card [tour]="item"></app-carousel-card>
+        }
+    </div>
+    
+</div>
+
